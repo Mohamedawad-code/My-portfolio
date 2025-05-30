@@ -1,0 +1,60 @@
+body {
+    background-color: #f4f8fb;
+}
+
+.Dashboard {
+    width: 100%;
+    height: 80px;
+     
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 2rem;
+      position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 1000;
+     
+
+}
+
+
+.nav-options {
+    display: flex;
+    gap: 42px;
+    background: rgba(62, 168, 255, 0.7); /* Black with 70% opacity */
+    border-radius: 24px;             /* Rounded corners */
+    padding: 12px 32px;              /* Space around links */
+    align-items: center;
+}
+
+.nav-options a {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);           /* Change link color */
+    text-decoration: none;  /* Remove underline */
+    font-weight: normal; 
+}
+
+.nav-options a::after {
+    content: "";
+    display: inline-block;      /* Change to inline-block */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 100%;                /* Stretches only under the text */
+    background: rgb(255, 255, 255);
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.nav-options a:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+
+/* Below here is Heading 1 desing, for the Headline */
