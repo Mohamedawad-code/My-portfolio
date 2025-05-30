@@ -1,5 +1,26 @@
 body {
     background-color: #f4f8fb;
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    /* Create a grid pattern using linear gradients */
+    background:
+        repeating-linear-gradient(0deg, rgba(0,0,0,0.09) 0, rgba(0,0,0,0.09) 1px, transparent 1px, transparent 40px),
+        repeating-linear-gradient(90deg, rgba(0,0,0,0.09) 0, rgba(0,0,0,0.09) 1px, transparent 1px, transparent 40px);
+    /* Radial gradient mask for fading effect */
+    mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
+    /* For better browser support, also use -webkit-mask-image */
+    -webkit-mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
+    opacity: 0.99; /* 50% transparent */
 }
 
 .Dashboard {
