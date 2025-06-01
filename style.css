@@ -1,3 +1,4 @@
+/* Below here is the background styling, were we have a grid pattern, the color of the background of the page. */
 body {
     background-color: #f4f8fb;
     margin: 0;
@@ -25,19 +26,16 @@ body::before {
 
 /* Below here is the Dashboard/navigation bar, */
 .Dashboard {
-    width: 100%;
-    height: 80px;
-     
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     font-size: 1.2rem;
-      position: fixed;
-     top: 0;
-     left: 0;
-     z-index: 1000;
-     
-
+    width: 100%;            /* Makes the navbar stretch across the whole screen */
+    height: 80px;           /* Sets the height of the navbar */
+    display: flex;          /* Uses Flexbox to arrange child elements (like your nav links) in a row */
+    align-items: center;    /* Vertically centers the items inside the navbar */
+    justify-content: center;/* Horizontally centers the items inside the navbar */
+    font-size: 1.2rem;      /* Sets the font size for text inside the navbar (1.2 times the default size) */
+    position: fixed;        /* Fixes the navbar to the top of the screen, so it stays visible when you scroll */
+    top: 0;                 /* Positions the navbar at the very top of the page */
+    left: 0;                /* Positions the navbar at the very left edge of the page */
+    z-index: 1000;          /* Makes sure the navbar stays above most other elements on the page */
 }
 
 
@@ -79,7 +77,7 @@ body::before {
 }
 
 
-/* Below here is Heading 1 desing, for the Headline */
+/* Below here is Heading 1 design, for the Headline, and the typing animation */
 
 .Typewriter1 {
     text-align: center;
@@ -102,4 +100,35 @@ body::before {
 @keyframes typing {
     from { width: 0% }
     to { width: 100% }
+}
+
+/* Below here is the text below the headning and the typing animation */
+
+.Typewriter2 {
+    text-align: center;
+    margin-top: -55px; /* Adjust this value to position the text below the title */
+}
+
+.typetext1 {
+    display: inline-block;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    border-right: 5px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    /* Animate width from 0ch to 30ch */
+    width: 0ch;
+    animation:
+        typing 2s steps(30, end) forwards,
+        cursor .7s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from { width: 0ch; }
+    to { width: 28ch; } /* Set this to your text length */
+}
+
+@keyframes cursor {
+    0%, 100% { border-color: black; }
+    50% { border-color: transparent; }
 }
