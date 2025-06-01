@@ -22,7 +22,22 @@ body::before {
     /* For better browser support, also use -webkit-mask-image */
     -webkit-mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
     opacity: 0.99; /* 50% transparent */
+
+
+    
 }
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(to right, #ff4ab41a, rgba(255,255,255,0)),
+        linear-gradient(to left, rgba(0,120,255,0.1), rgba(255,255,255,0));
+}
+
+
 
 /* Below here is the Dashboard/navigation bar, */
 .Dashboard {
@@ -95,6 +110,7 @@ body::before {
     white-space: nowrap; /* Prevents text from wrapping */
     overflow: hidden; /* Hides overflow text */
     animation: typing 2s steps(30, end), blink-cursor 0.7s step-end infinite;
+    z-index: 1000;
 }
 
 @keyframes typing {
