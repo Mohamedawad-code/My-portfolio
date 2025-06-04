@@ -15,8 +15,8 @@ body::before {
     pointer-events: none;
     /* Create a grid pattern using linear gradients */
     background:
-        repeating-linear-gradient(0deg, rgba(0,0,0,0.09) 0, rgba(0,0,0,0.09) 1px, transparent 1px, transparent 40px),
-        repeating-linear-gradient(90deg, rgba(0,0,0,0.09) 0, rgba(0,0,0,0.09) 1px, transparent 1px, transparent 40px);
+        repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 40px),
+        repeating-linear-gradient(90deg, rgba(0,0,0,0.1) 0, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 40px);
     /* Radial gradient mask for fading effect */
     mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
     /* For better browser support, also use -webkit-mask-image */
@@ -148,3 +148,27 @@ body::after {
     0%, 100% { border-color: black; }
     50% { border-color: transparent; }
 }
+
+/* Below here is the button design, for the schdule a call button */
+
+.button-container{
+ text-align: center;
+}
+
+.Button1 {
+  font-size: 2.5em;
+  margin-top: 250px;
+  border-radius: 27px;
+  background: linear-gradient(to right, #ff71c4, #7ebaff);
+  border:none;
+  color:rgb(255, 255, 255);
+   transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 290px;          /* Minimum width of the button */
+  min-height:70px;
+}
+
+.Button1:hover {
+   transform: scale(1.05);
+   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+    
