@@ -153,6 +153,24 @@ body::after {
     50% { border-color: transparent; }
 }
 
+
+/* Webdesign animation customization */
+
+.web-animation-frame {
+     display: block;
+    margin: -20px auto 0 auto; /* Reduce top margin for less gap above the animation */
+    width: 600px;             /* Example width, adjust as needed */
+    height: 350px;            /* Example height, adjust as needed */
+    max-width: 100%;          /* Responsive */
+    
+
+}
+
+
+
+
+
+
 /* Below here is the button design, for the schdule a call button */
 
 .button-container{
@@ -161,7 +179,7 @@ body::after {
 
 .Button1 {
   font-size: 2.0em;
-  margin-top: 320px;
+  margin-top: 0px;
   border-radius: 27px;
   background: linear-gradient(to right, #00aeff, #21a6ff);
   border:none;
