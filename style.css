@@ -113,6 +113,10 @@ body::after {
     z-index: 1000;
 }
 
+.highlight {
+    color: #00aeff; /* Change this to your desired highlight color */
+}
+
 @keyframes typing {
     from { width: 0% }
     to { width: 100% }
@@ -156,19 +160,29 @@ body::after {
 }
 
 .Button1 {
-  font-size: 2.5em;
-  margin-top: 250px;
+  font-size: 2.0em;
+  margin-top: 320px;
   border-radius: 27px;
-  background: linear-gradient(to right, #ff71c4, #7ebaff);
+  background: linear-gradient(to right, #00aeff, #21a6ff);
   border:none;
   color:rgb(255, 255, 255);
    transition: transform 0.2s, box-shadow 0.2s;
   min-width: 290px;          /* Minimum width of the button */
-  min-height:70px;
+  min-height:60px;
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.38); /* <-- Drop shadow */
+  opacity: 0;
+  animation: fade-in 0.4s ease-in forwards;
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .Button1:hover {
    transform: scale(1.05);
    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
+
+
     
