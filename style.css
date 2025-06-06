@@ -101,7 +101,7 @@ body::after {
 .title {
      display: inline-block; 
     text-align: center;
-    margin-top: 100px; /* Pushes the title below the navbar */
+    margin-top: 50px; /* Pushes the title below the navbar */
      font-family: Arial, Helvetica, sans-serif;
      font-size: 100px;
     color: rgb(0, 0, 0);           /* Change link color */
@@ -132,6 +132,7 @@ body::after {
 .typetext1 {
     display: inline-block;
     font-size: 1.2em;
+    margin-top: 50px; /* Adjusts the space between the title and this text */
     font-family: Arial, Helvetica, sans-serif;
     border-right: 5px solid;
     white-space: nowrap;
@@ -158,7 +159,7 @@ body::after {
 
 .web-animation-frame {
      display: block;
-    margin: -20px auto 0 auto; /* Reduce top margin for less gap above the animation */
+    margin: -10px auto 0 auto; /* Reduce top margin for less gap above the animation */
     width: 600px;             /* Example width, adjust as needed */
     height: 350px;            /* Example height, adjust as needed */
     max-width: 100%;          /* Responsive */
@@ -191,6 +192,7 @@ body::after {
   box-shadow: 0 4px 24px rgba(0,0,0,0.38); /* <-- Drop shadow */
   opacity: 0;
   animation: fade-in 0.4s ease-in forwards;
+  z-index:500;
 }
 @keyframes fade-in {
   from { opacity: 0; }
@@ -202,5 +204,134 @@ body::after {
    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 
-
+/* Below here is service sections */
     
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Main services section container */
+.services-section {
+  padding: 80px 20px; /* Top/bottom padding and side margins */
+  max-width: 1200px; /* Maximum width of the section */
+  margin: 0 auto; /* Center the section */
+  text-align: center; /* Center align all text */
+  margin-top: 100px;
+}
+
+/* Section title styling */
+.section-title {
+  font-size: 2.5rem; /* Large title size */
+  font-weight: bold;
+  color: #2c3e50; /* Dark blue-gray color */
+  margin-bottom: 20px; /* Space below title */
+}
+
+/* Section subtitle/description */
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #6c757d; /* Gray color for subtitle */
+  margin-bottom: 60px; /* Space before cards */
+  max-width: 600px; /* Limit width for readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Container for all three cards */
+.cards-container {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 30px; /* Space between cards */
+  margin-top: 40px;
+}
+
+/* Individual card styling */
+.service-card {
+  background: white; /* White background */
+  border-radius: 12px; /* Rounded corners */
+  padding: 40px 30px; /* Internal spacing */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  border: 1px solid #e9ecef; /* Light border */
+}
+
+/* Card hover effect */
+.service-card:hover {
+  transform: translateY(-5px); /* Lift card slightly */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Icon container in each card */
+.card-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #5db6ff 0%, #66edff 100%); /* Gradient background */
+  border-radius: 50%; /* Make it circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px auto; /* Center and add bottom margin */
+  font-size: 2rem; /* Large icon size */
+  color: white;
+}
+
+/* Card title styling */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px; /* Space below title */
+}
+
+/* Card description text */
+.card-description {
+  color: #6c757d; /* Gray text color */
+  line-height: 1.6; /* Better readability */
+  font-size: 1rem;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem; /* Smaller title on mobile */
+  }
+
+  .services-section {
+    padding: 60px 15px; /* Less padding on mobile */
+  }
+
+  .cards-container {
+    gap: 20px; /* Less gap between cards */
+  }
+
+  .service-card {
+    padding: 30px 20px; /* Less padding in cards */
+  }
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .card-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
